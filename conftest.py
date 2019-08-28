@@ -17,13 +17,11 @@ def app_driver():
         command_executor=EXECUTOR,
         desired_capabilities={
             "app": ANDROID_APP_PATH,
+            # Chess Free V3.02
             "appPackage": "uk.co.aifactory.chessfree",
-            # set to package name in AndroidManifest.xml
             "appActivity": ".ChessFreeActivity",
-            # set to activity that contains intent LAUNCHER in AndroidManifest.xml
             "platformName": "Android",
             "platformVersion": "9",
-            # set to android version picked in emulator
             "deviceName": "Android Emulator",
             "automationName": "UiAutomator2",
         }
