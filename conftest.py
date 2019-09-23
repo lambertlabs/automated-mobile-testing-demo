@@ -6,7 +6,7 @@ from appium import webdriver
 EXECUTOR = 'http://127.0.0.1:4723/wd/hub'
 ANDROID_APP_DIR = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'android_apps')
 
-apk_files = [file for file in os.listdir(ANDROID_APP_DIR) if file.endswith('.apk')]
+apk_files = [f for f in os.listdir(ANDROID_APP_DIR) if f.endswith('.apk')]
 assert len(apk_files) == 1, 'App directory can only contain one app file.'
 ANDROID_APP_PATH = os.path.join(ANDROID_APP_DIR, apk_files.pop(0))
 
